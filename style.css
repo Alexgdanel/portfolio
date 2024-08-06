@@ -1,0 +1,257 @@
+*{
+    font-family: "Raleway", sans-serif;
+    padding: 0px;
+    margin: 0px;
+    /* inside the browser- contents */
+    box-sizing: border-box;
+}
+#container{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 100px;
+}
+.logo{
+    width: 130px;
+}
+.listitem{
+    list-style: none;
+    display: inline;
+    margin: 0px 20px;
+}
+.links{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+
+}
+.links:hover{
+    text-decoration: underline;
+    color: orange;
+}
+.homecontents{
+    margin: 13% 0px 0px 8%;
+
+}
+.username{
+    font-size: 50px;
+    font-family: "Syne", sans-serif;
+    margin-bottom: 20px;
+
+}
+.lname{
+    font-family: "Syne", sans-serif;
+    color: orange;
+}
+.userdetails{
+    line-height: 1.2;
+}
+#download{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 20px;
+}
+.homeimages{
+    width: 45%;
+    /* 75 beacuse height of div donot go to the nav */
+    height: 75%;
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+
+}
+.group1{
+    /* for overlapping */
+    position: absolute;
+    /* to overlap height should be same */
+    height: 100%;
+    /* for hover effect we have to set the iniial position */
+    bottom: 0px;
+    left: 50%;
+    /* by giving the positiion image move to left so nullify */
+    transform: translateX(-50%);
+    /* for smooth transition */
+    transition: bottom 2s,left 1s;
+}
+.homeimages:hover #back{
+    bottom: 70px;
+}
+.homeimages:hover #girl{
+    /* to move left we have to give less than orginal position */
+    left: 40%;
+}
+#about{
+    margin: 16% 8% 0px 8%;
+
+}
+.sectionhead{
+    text-align: center;
+}
+.mainhead{
+    font-size: 30px;
+}
+.subhead{
+    font-size: 20px;
+    color: green;
+}
+/* grid - used to give two partions equal width 
+fr- used(available space use for grid )  for grid width (refer w3schools for css grid)*/
+.aboutbody{
+    margin-top: 20px;
+    display: grid;
+    /* repeat(no of partitions, width) */
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    /* gap between two partitions */
+    gap: 20px;
+}
+.img1{
+    width: 80%;
+}
+/* 6px=1rem */
+.aboutcontent{
+    font-size: 20px;
+    text-align: justify;
+}
+.informations{
+    margin-top: 1.3rem;
+    
+}
+.infobox{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.infobox>span{
+    margin-left: 1rem;
+}
+.skills{
+margin: 8% 8% 0px 8%;
+}
+.skillcontent{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+    margin-top: 20px;
+}
+.img2{
+    width: 80%;
+}
+.bars{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0px;
+    position: relative;
+}
+.barhead,.barpercent{
+    font-weight: 500;
+    font-size: 1.2rem;
+
+}
+.basebar{
+    width: 100%;
+    height: 0.5rem;
+    background-color: black;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+
+}
+.htmlbar{
+    background-color: orange;
+    width: 91%;
+}
+.cssbar{
+    background-color: orange;
+    width: 85%;
+}
+.jsbar{
+    background-color: orange;
+    width: 76%;
+}
+.reactbar{
+    background-color: orange;
+    width: 72%;
+}
+#contact{
+    margin: 0px 8%;
+}
+.iconcollection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.2rem;
+}
+.icon{
+    height: 50px;
+    width: 50px;
+    /* border: solid 1px black; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+}
+.brands{
+    font-size: 2rem;
+}
+
+.icon:hover{
+    background-image: linear-gradient(to bottom right,black,rgb(152, 152, 255),white) ;
+}
+
+.icon:hover .brands{ 
+    color: rgb(241, 241, 241);
+    animation: rotate 3s;
+}
+
+    @keyframes rotate {
+        0%{
+            transform: rotate(30deg);
+        }
+        20%{
+            transform:rotate(-30deg);
+        }
+        40%{
+            transform: rotate(30deg);
+        }
+        60%{
+            transform: rotate(-30deg);
+        }
+    }
+
+    .footer{
+        margin: 8% 0px 0px 0px;
+    }
+      
+    #copy{
+        text-align: center;
+        font-weight: 600;
+    }
+    .uparrow{
+        float: right;
+        margin: -30px 30px 30px 0px;
+    }
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: azure;
+}
+::-webkit-scrollbar-thumb{
+    background-color: orange;
+}
